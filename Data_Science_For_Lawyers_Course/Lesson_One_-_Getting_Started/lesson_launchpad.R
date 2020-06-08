@@ -1,0 +1,12 @@
+
+install.packages("swirlify")
+library(swirlify)
+install.packages(swirl)
+library(swirl)
+swirl()
+get_current_lesson()
+swirlify()
+demo_lesson(from = 30)
+lesson_to_html(open_html = TRUE)
+test_lesson()
+warnings()
