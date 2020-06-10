@@ -1,0 +1,424 @@
+---
+title: Lesson One - Getting Started
+output:
+  html_document:
+    theme: spacelab
+---
+
+```{r, strip.white = TRUE, echo=FALSE, message=FALSE}
+suppressPackageStartupMessages(library(swirl))
+
+# Code placed in this file fill be executed every time the
+      # lesson is started. Any variables created here will show up in
+      # the user's working directory and thus be accessible to them
+      # throughout the lesson.
+``` 
+
+Hi there! Welcome to the Data Science For Lawyers Course.
+
+This is Lesson One - Getting Started.
+
+------------
+
+Disclaimer:
+
+These lessons are based on workshops original created by Wolfgang Alscher , a Professor at the University of Ottawa. UCL Data Science Society does not take any credit for the creation of this material, except where additions/edits were made. Swirl integration, additional material and questions, as well as the Jupyter notebook were created by Amanda Lim, Bhavya Gupta, and Johann Ohler as part of a project initiated by the UCL Data Science Society. Visit http://www.datascienceforlawyers.org/learning-resources/ to view the original workshops.
+
+------------ 
+
+Throughout the lesson, we'll be using terms like "console" and "script".
+
+The SCRIPT is the top left pane in RStudio. The code you execute in here , but you can edit, add, and remove lines of code and execute it again since R saves this as an .R file. The SCRIPT is good if you want to execute multiple lines of code, save variable values, and edit that code over time. Hit cmd-Enter (Mac) or ctrl-Enter (Non-Mac) to run all the code from the SCRIPT.
+
+The CONSOLE is the bottom left pane in RStudio. All code that is run, as well as the output of that code, will show up here. You can also type in code directly into the CONSOLE and execute it, but this won't be saved. The CONSOLE is useful for when you want to quickly execute one line of code.
+
+Most of our exercises will be done in the CONSOLE, but feel free to save your answers in the SCRIPT if you'd like. 
+
+------------
+
+Lesson One - Getting Started, Section One - Basic Calculations in R
+
+Author - Wolfgang Alschner
+
+Edits - Amanda Lim
+
+Version - March 2018, Edits May 2020
+
+------------ 
+
+In simple terms, R is a calculator.
+
+You enter an equation and it returns the answer.
+
+Let's try this with a few examples. Type in "1+1" in your R console.
+
+```{r, strip.white = TRUE}
+1+1
+``` 
+
+Notice how R returns "2", the answer to what you entered.
+
+Let's move on to some other calculations. 
+
+Here are some other operations in R...
+
+Division: 16/4
+
+Multiplication: 5*5
+
+Exponents: 3^2 
+
+Divide 10 by 2 in your console.
+
+```{r, strip.white = TRUE}
+10/2
+``` 
+
+You can add COMMENTS to your code in the script using #. This way, R will understand that this part of your script is a comment and as such will not execute this part. Using comments in your script is useful, because it explains what your code is doing to the others who are reading your code or to yourself after returning to it after some time. You should comment your code as much as possible. It will make your life easier!
+
+Comments are used in the R Script since that code is executed time and time again.
+
+Try adding a comment using # into your R script now; it should turn a different colour!
+
+Hit enter in the console to move on to the next message. 
+
+In addition to performing calculations, you can also store information you have created. In the upper right hand corner of RStudio, you can see the ENVIRONMENT. Here, you see all variables you have created and their corresponding values.
+
+You store values in variables using an arrow "<-" like so:
+
+v <- 10 
+
+Let's try. Assign the value of 1 to the variable x.
+
+```{r, strip.white = TRUE}
+x<-1
+``` 
+
+Now assign 2+2 to a variable y.
+
+```{r, strip.white = TRUE}
+y <- 2+2
+``` 
+
+Both x and y should show up in the top right hand pane in RStudio called "Environment". Check your Environment in RStudio now to see them.
+
+Notice how the value of y is equal to 4. R automatically added 2+2 for us. How cool! 
+
+To print the information you have stored in a variable, you can either type in the name of the variable in the script or console or use print().
+
+To tell R to print out the value of a variable, put that variable inside the brackets when typing print().
+
+Let's try printing variable y using print().
+
+```{r, strip.white = TRUE}
+print(y)
+``` 
+
+Notice above that R "spits out" the answer.
+
+You can also perform operations with variables that have values assigned to them. 
+
+Add variables x and y together in the console.
+
+```{r, strip.white = TRUE}
+x+y
+``` 
+
+We call these variables you create OBJECTS. You have almost complete liberty to name your object. All of the following are objects:
+
+silly_name <- 5+3
+
+v <- silly_name
+
+number_of_planets <- 7
+
+The values of objects appear in the "Environment" in RStudio once you execute the code.
+
+These values can be updated and changed at any time; you just have to change the value and hit cmd-enter again in the Script. 
+
+You have now completed Lesson One - Getting Started, Section One - Basic Calculations in R.
+
+Great job! 
+
+------------
+
+Lesson One - Getting Started, Section Two - Object Classes
+
+Author - Wolfgang Alschner
+
+Edits  - Amanda Lim
+
+Version - March 2018
+
+------------ 
+
+R powerful is a powerful tool because you can work with numbers and with other types of data.
+
+More specifically, there are three types of data objects that we will use.
+
+- numerical objects e.g. 1; 67; 5.56541
+
+- logical objects i.e. TRUE, FALSE
+
+- character objects e.g. "Hello World" 
+
+To determine the type of data object somethign is, you simply do class(). For example:
+
+class(silly_name)
+
+If we executed this code, R would spit out "numeric". This makes sense since we told R that silly_name was 5+3.
+
+Define a variable another_silly_name with the value: "Hello World".
+
+```{r, strip.white = TRUE}
+another_silly_name <- "Hello World"
+``` 
+
+Now, let's ask R in the console what the class of another_silly_name is by using class().
+
+```{r, strip.white = TRUE}
+class(another_silly_name)
+``` 
+
+Commands like class() or print() are FUNCTIONS. You can perform functions on R objects.
+
+Whenever you do not know what a funciton does, you can ask R using ?function_name(). For example:
+
+?class() 
+
+Up to now, we have been dealing with single values: one integer or one string. You can aggregate these values into VECTORS.
+
+To do so you aggregate values with c().
+
+numeric_vector <- c ( 1 , 2 , 3 , 4 , 5 ) 
+
+Define a vector called my_numerical_vector with the numbers 5,4,3,2,1.
+
+```{r, strip.white = TRUE}
+my_vector <- c(5,4,3,2,1)
+``` 
+
+Nice! my_vector is in your Environment now too.
+
+You can also create vectors with character strings as well, like so:
+
+character_vector <- c ( "Days" , "Months" , "Year" ) 
+
+Create a character vector called my_character_vector with the words "Monday", "Tuesday", "Wednesday".
+
+```{r, strip.white = TRUE}
+my_character_vector <- c("Monday", "Tuesday", "Wednesday")
+``` 
+
+That one shows up in our environment too. 
+
+In turn, vectors can be aggregated into MATRICES and DATAFRAMES. Both are essentially tables. The difference is that matrices must be one type of data whereas dataframes can combine different types of data. We will work mostly with dataframes. Typically, you will load dataframes from external sources. 
+
+As an example, take a look at one of the in-built dataframe of R ("USArrests") that provides crime statistics of US states.
+
+type data("USArrests") into the console.
+
+```{r, strip.white = TRUE}
+data("USArrests")
+``` 
+
+Now R knows to use the dataset USArrests. USArrests is also now in the envronment under "Data". Under "Data", you'll
+
+Now type print(USArrests) to view the dataset.
+
+```{r, strip.white = TRUE}
+print(USArrests)
+``` 
+
+You have now completed Lesson One - Getting Started, Section One - Basic Calculations in R.
+
+Great job! 
+
+------------
+
+Lesson One - Getting Started, Section Three - my_character_vectoressing and Manipulating Data
+
+Author - Wolfgang Alschner
+
+Edits - Amanda Lim
+
+Version - March 2018, Edits June 2020
+
+------------ 
+
+There are different commands you can use to access data in your R objects, and their use differs slightly between object classes.
+
+To access an item in a list, just indicate its place within the vector through [ ]. 
+
+Try creating a vector called fruit_vector with the words "Apple", "Banana", and "Orange", in that order.
+
+```{r, strip.white = TRUE}
+fruit_vector <- c("Apple", "Banana", "Orange")
+``` 
+
+Now, access the second item in the list by typing fruit_vector[2].
+
+```{r, strip.white = TRUE}
+fruit_vector[2]
+``` 
+
+See how R spits out the second item in the vector? Pretty cool right! 
+
+If you are unsure about the location of given information in a list, use the which() function.
+
+For example,
+
+which(fruit_vector == "Apple")
+
+Will give you the location of the word apple in the vector fruit_vector. 
+
+Use the which() function to determine the location of the word "Orange" in fruit-vector.
+
+```{r, strip.white = TRUE}
+which(fruit_vector == "Orange")
+``` 
+
+Most of the time we work with dataframes. Dataframes have two dimensions - rows and columns. Just like a table. When using [ ] to access values in dataframes, R has an in-built ordering of placing rows before columns i.e. dataframe[row,columm].
+
+So when you want to access data on "Arkansas" (4th row) on "Murder" (1st column), you would write:
+
+USArrests[4,1] 
+
+Try asking R to show us the data entry on "Arizona" (3rd row) on "Assault" (2nd column) of the USArrests dataframe.
+
+```{r, strip.white = TRUE}
+USArrests[3,2]
+``` 
+
+Notice how R spits out just a single number? That's because we told it to give us whatever is in row 3, column 2 of the USArrests dataframe. Nice! 
+
+If you are interested in all columns for Arkansas just leave the space behind the comma blank.
+
+Try acessing all the data on "Arkansas" (row 4) in all columns.
+
+```{r, strip.white = TRUE}
+USArrests[4,]
+``` 
+
+Similarly, if you are interested in murder rates (column 1) for all states (all rows) just leave the space in front of the comma blank.
+
+Try acessing the data for "Murder" (row 1) in all states.
+
+```{r, strip.white = TRUE}
+USArrests[,1]
+``` 
+
+There are alternative ways to get to the same information.
+
+To access only the murder rates in the USArrests dataframe, you can call the column name:
+
+USArrests["Murder"]
+
+This would be the same as indicating the column.
+
+Try accessing the data in the column "Assault" now.
+
+```{r, strip.white = TRUE}
+USArrests["Assault"]
+``` 
+
+Alternatively, to access the data in a column in a dataframe we can also use the $ character.
+
+We would write:
+
+USArrests$Assault
+
+Which means to acess all the data in the column "Assault" in the dataset USArrests.
+
+Try using this method to access all the data in the column "UrbanPop"
+
+```{r, strip.white = TRUE}
+USArrests$UrbanPop
+``` 
+
+You can combine the above $ and [ ] approaches.
+
+For instance, to again get the murder rates in Arkansas (row 4), you can write:
+
+USArrests$Murder[4]
+
+Try using this method to access the Urban Population in California (row 5)
+
+```{r, strip.white = TRUE}
+USArrests$UrbanPop[5]
+``` 
+
+Sometimes we are only interested in subsets of the data, we then create objects from larger dataframes. Data scientists usually do this if they aren't working with part of a data, and don't need it.
+
+For instance, we want to create a new dataframe that only has the murder rate data.
+
+murder_rate <- USArrests["Murder"]
+
+Whenever we use or access the new dataframe, murder_rate, R will only show us the data in the column "Murder" in USArrests.
+
+Try creating the murder_rate dataframe by copying the code above.
+
+```{r, strip.white = TRUE}
+murder_rate <- USArrests["Murder"]
+``` 
+
+If we want to exclude murder rates from our dataset, then we can simply write [,-1] which will eliminate the first column.
+
+Create a new object called other_crimes removing the first column out of USArrests.
+
+```{r, strip.white = TRUE}
+other_crimes <- USArrests[,-1]
+``` 
+
+Now let's print out other_crimes using print().
+
+```{r, strip.white = TRUE}
+print(other_crimes)
+``` 
+
+Notice how the first column, "Murder", isn't there anymore?
+
+Now what if we wanted to add it back?
+
+In order to combine datasets, we use two functions. The function rbind() glues two datasets together by their rows, while cbind() connects them by their columns.
+
+So if we want to merge the two datasets again, we can do:
+
+full_dataset <- cbind(dataframe_1, dataframe_2)
+
+Note that in order for cbind() to work, the dataframes must have common rows.
+
+And similarily, for rbind() to work, the dataframes must have common columns.
+
+If we tried to use these functions on two dataframes with no like columns/rows, it won't work! 
+
+Use cbind() to combine murder_rate and other_crimes, and assign it to a new dataframe called full_dataset.
+
+```{r, strip.white = TRUE}
+full_dataset <- cbind(murder_rate, other_crimes)
+``` 
+
+Now print out full_dataset.
+
+```{r, strip.white = TRUE}
+print(full_dataset)
+``` 
+
+Nice! Notice how the "Murder" column is back now, and that the two dataframes were combined using cbind() based on their common rows (the states). 
+
+You have now completed Lesson One, Section Three - Accessing and Manipulating Data.
+
+Nice job! 
+
+------------
+
+Lesson One - Getting Started, Section Four - Plotting Data
+
+Author - Wolfgang Alschner
+
+Edits - Bhavya Gupta
+
+Version - March 2018, Edits June 2020
+
+------------ 
+
