@@ -556,7 +556,7 @@ text(disputes$year,disputes$claims, label=disputes$judges)
 
 Copy this new line of code and see what happens.
 ```{r, strip.white = TRUE}
-text(disputes$year,disputes$claims, label=disputes$judges)
+#text(disputes$year,disputes$claims, label=disputes$judges)
 ```
 
 Now we can see exactly which judge corresponded to which claim. 
