@@ -23,3 +23,10 @@ set_lesson()
 # Edit the RMD and knit an HTML for nicer formatting
 lesson_to_html(dest_dir = NULL, open_html = TRUE, keep_rmd = TRUE,
                quiet = FALSE, install_course = TRUE)
+
+# Create .swc file for exporting course
+# Hint: run set_lesson() first
+pack_course()
+
+# Unpack course if .swc is created but you want to make edits again
+unpack_course()
