@@ -13,33 +13,7 @@ Legal data science refers to harnessing the power of computer science and artifi
 
 
 ## What Does This Course Teach Me?
-This course teaches you how to utilise R, a programming language for data science, from scratch through an interactive learning environment. These lessons will teach you how to approach and solve big legal questions in a simple programming environment.
-
-
-## Available Lessons
-We will be releasing the lessons as we code them every ten days. If a lesson has not been coded yet, you will NOT be able to take it. If there is a new lesson, re-download this GitHub repository and follow the same steps under "How do I get started?"
-
-
-### Here is a list of lessons you can take now:
-
-Lesson One - Getting Started
-
-
-### Here is a list of lessons that will be released soon:
-
-Lesson Two – Webscraping and Data Upload
-
-Lesson Three – Regular Expressions
-
-Lesson Four – Citation Networks
-
-Lesson Five - Dictionary analysis
-
-Lesson Six - Similarity
-
-Lesson Seven – Automated Content Analysis Through Machine learning
-
-Lesson Eight – Prediction
+This course teaches you how to utilise R, a programming language for data science, from scratch through an interactive learning environment called Swirl. Swirl allows you to learn R in a question-and-response style, like a chatbot who is your personal tutor! The Data Science For Lawyers Course will teach you how to approach and solve big legal questions using R. 
 
 
 ## About The Original Authors
@@ -82,4 +56,4 @@ Here is a list of sources referenced on the original Data Science For Lawyers we
 UCL Data Science Society does not take any credit for the creation of this material, except where additions/edits were made. Swirl integration and additional material and questions were created by Amanda Lim and  Bhavya Gupta as part of a project initiated by the UCL Data Science Society.
 
 
-Last updated June 8th, 2020
+Last updated June 24th, 2020
