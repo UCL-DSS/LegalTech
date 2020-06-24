@@ -29,7 +29,7 @@ This file accompanies interactive Swirl lessons written by Amanda Lim and Bhavya
 
 ***Disclaimer:***
 
-These lessons are based on workshops original created by Wolfgang Alschner , a Professor at the University of Ottawa. UCL Data Science Society does not take any credit for the creation of this material, except where additions/edits were made. Swirl integration, additional material and questions, as well as the Jupyter notebook were created by Amanda Lim, Bhavya Gupta, and Johann Ohler as part of a project initiated by the UCL Data Science Society. Visit http://www.datascienceforlawyers.org/learning-resources/ to view the original workshops.
+These lessons are based on workshops original created by Wolfgang Alschner , a Professor at the University of Ottawa. UCL Data Science Society does not take any credit for the creation of this material, except where additions/edits were made. Swirl integration, additional material and questions, as well as the Jupyter notebook were created by Amanda Lim and Bhavya Gupta as part of a project initiated by the UCL Data Science Society. Visit http://www.datascienceforlawyers.org/learning-resources/ to view the original workshops.
 
 *Version: June 2020*
 
@@ -181,7 +181,7 @@ More specifically, there are three types of data objects that we will use.
 
 ------------ 
 
-To determine the type of data object somethign is, you simply do class(). For example:
+To determine the type of data object something is, you simply do class(). For example:
 ```{r}
 class(silly_name)
 ```
@@ -324,7 +324,7 @@ Notice how R spits out just a single number? That's because we told it to give u
 
 If you are interested in all columns for Arkansas just leave the space behind the comma blank.
 
-***Try acessing all the data on "Arkansas" (row 4) in all columns.***
+***Try accessing all the data on "Arkansas" (row 4) in all columns.***
 
 ```{r, strip.white = TRUE}
 USArrests[4,]
@@ -334,7 +334,7 @@ USArrests[4,]
 
 Similarly, if you are interested in murder rates (column 1) for all states (all rows) just leave the space in front of the comma blank.
 
-***Try acessing the data for "Murder" (row 1) in all states.***
+***Try accessing the data for "Murder" (row 1) in all states.***
 
 ```{r, strip.white = TRUE}
 USArrests[,1]
